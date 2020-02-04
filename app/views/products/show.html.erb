@@ -1,0 +1,88 @@
+<p id="notice"><%= notice %></p>
+
+<div class="datos_ingresados"> 
+  <h3> Datos ingresados </h3>
+
+  <p>
+    <strong>Exchange Rate</strong>
+    <%= @product.exchange_rate %>
+  </p>
+
+  <p>
+    <strong>Valor Maximo COP:</strong>
+    <%= @product.valor_maximo_cop %>
+  </p>
+
+  <p>
+    <strong>Valor USD:</strong>
+    <%= @product.valor_usd %>
+  </p>
+
+  <p>
+    <strong>Peso (lb):</strong>
+    <%= @product.peso %>
+  </p>
+</div>
+
+<br>
+
+<div div="Datos_calculados"> 
+  <h3> Datos Calculados </h3>
+  <p>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
+  <p>
+    <strong>Valor COP:</strong>
+    <%= @product.valor_cop %>
+  </p>
+
+  <p>
+    <strong>Impuesto USD:</strong>
+    <%= @product.impuesto %>
+  </p>
+
+  <p>
+    <strong>Seguro USD:</strong>
+    <%= @product.seguro %>
+  </p>
+
+  <p>
+    <strong>Flete USD:</strong>
+    <%= @product.flete %>
+  </p>
+
+  <p>
+    <strong>Aduana USD:</strong>
+    <%= @product.aduana %>
+  </p>
+
+  <p>
+    <strong>Total Envio USD:</strong>
+    <%= @product.total_envio_usd %>
+  </p>
+
+  <p>
+    <strong>Total Envio COP:</strong>
+    <%= @product.total_envio_cop %>
+  </p>
+
+  <p>
+    <strong>Total Cost COP:</strong>
+    <%= @product.total_cost %>
+  </p>
+
+  <p>
+    <strong>Accion:</strong>
+    <%= @product.accion %>
+  </p>
+
+
+  <p>
+    <strong>Bought:</strong>
+    <%= @product.bought %>
+  </p>
+</div>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wtrade</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+   <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0"> 
+
+  </head>
+
+  <body>
+    <div class="container"> 
+      <%#= render 'layouts/navbar' %>
+      <div class="container2">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
+
+

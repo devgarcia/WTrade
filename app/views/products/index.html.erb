@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<div class="table-responsive">
+  <div class="row indextable">
+   <!-- <div class="container-fluid">-->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Exchange Rate</th>
+            <th>Valor USD</th>
+            <th>Valor COP</th>
+            <th>Impuesto</th>
+            <th>Seguro</th>
+            <th>Peso</th>
+            <th>Flete</th>            
+            <th>Aduana</th>
+            <th>Total Envio USD</th>
+            <th>Total Envio COP</th>
+            <th>Costo Total COP</th>
+            <th>Valor Maximo COP</th>
+
+            <th>Accion</th>
+            <th>Bought</th>
+            
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @products.each do |product| %>
+            <tr>
+              <td><%= product.name %></td>
+              <td><%= product.exchange_rate %></td>
+              <td><%= product.valor_usd %></td>
+              <td><%= product.valor_cop %></td>
+              <td><%= product.impuesto %></td>
+              <td><%= product.seguro %></td>
+              <td><%= product.peso %></td>
+              <td><%= product.flete %></td>              
+              <td><%= product.aduana %></td>
+              <td><%= product.total_envio_usd %></td>
+              <td><%= product.total_envio_cop %></td>–              
+              <td><%= product.total_cost %></td>
+              <td><%= product.valor_maximo_cop %></td>
+              <td><%= product.accion %></td>
+              <td><%= product.bought %></td>
+              
+              <td><%= link_to 'Show', product %></td>
+              <td><%= link_to 'Edit', edit_product_path(product) %></td>
+              <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <!--</div>-->
+</div>
+<br>
+
+<%= link_to 'New Product', new_product_path %>

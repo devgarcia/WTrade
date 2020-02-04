@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  valor_usd: 1.5
+  valor_cop: 1.5
+  impuesto: 1.5
+  seguro: 1.5
+  flete: 1.5
+  aduana: 1.5
+  total_envio_usd: 1.5
+  total_envio_cop: 1.5
+  accion: MyString
+  bought: false
+  valor_maximo_cop: 1.5
+
+two:
+  name: MyString
+  valor_usd: 1.5
+  valor_cop: 1.5
+  impuesto: 1.5
+  seguro: 1.5
+  flete: 1.5
+  aduana: 1.5
+  total_envio_usd: 1.5
+  total_envio_cop: 1.5
+  accion: MyString
+  bought: false
+  valor_maximo_cop: 1.5
