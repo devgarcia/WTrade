@@ -10,38 +10,41 @@
       </ul>
     </div>
   <% end %>
+ 
 
-  
+<div class="cardInitial">
 
-  <div class="cardInitial">
+  <div class="card">
 
-<div class="card-body">
+    <div class="headerInitial">
+      <h1 class="text-center mb-4 initialTitle">Calculate Product </h1>
+    </div>
+ 
 
-  <div class="headerInitial">
-    <h1 class="text-center mb-4 initialTitle">Product </h1>
-  </div>
+    <div class="form-group row row-values">      
+        <%= form.label :name, "Exchange Rate (USD-COP)",  :class =>"col-sm-6 col-form-label" %>
+        <%= form.text_field :exchange_rate, :value =>"#{@formattedrate}" %>     
+    </div>
 
-   <div class="form-group"> 
-    <%= form.label :name, "Exchange Rate"%>
-    <%= form.text_field :exchange_rate %>
-  </div>
+    <div class="form-group row row-values">
+      <%= form.label :name, "Valor Maximo COP",  :class =>"col-sm-6 col-form-label" %>
+        <%= form.text_field :valor_maximo_cop %>
+    </div>
 
-  <div class="form-group"> 
-    <%= form.label :name, "Valor Maximo COP"%>
-    <%= form.text_field :valor_maximo_cop %>
-  </div>
+    <div class="form-group row row-values">
+      <%= form.label :name, "Valor Real USD",  :class =>"col-sm-6 col-form-label" %>
+        <%= form.text_field :valor_usd %>
+    </div>
 
-  <div class="form-group"> 
-    <%= form.label :name, "Valor USD" %>
-    <%= form.text_field :valor_usd %>
-  </div>
+    <div class="form-group row row-values">
+     <%= form.label :name, "Peso (lb)",  :class =>"col-sm-6 col-form-label" %>
+     <%= form.text_field :peso %>
+    </div>
 
-  <div class="form-group"> 
-    <%= form.label :peso %>
-    <%= form.text_field :peso %>
-  </div>
-
-  
+    <div class="form-group row row-values">
+      <%= form.label :name, :class =>"col-sm-6 col-form-label" %>
+      <%= form.text_field :name %>
+    </div>
 
 <!-- 
 
@@ -105,10 +108,16 @@
     <%#= form.text_field :valor_maximo_cop %>
   </div>
  -->
+ <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Check !", :class=> "btn btn-success check" %>
   </div>
 <% end %>
+
+<%#= link_to 'Back', products_path, :class=> "btn btn-danger"%>
+<div class="back-products" > 
+  <%= link_to 'Back', products_path %>
+</div>
 
 </div>
 

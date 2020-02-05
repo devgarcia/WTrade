@@ -22,6 +22,14 @@ before_save :set_total_envio_cop
 before_save :set_action
 before_save :set_total_cost
 
+after_initialize :init
+
+def init
+  self.valor_usd  ||= 0
+  self.peso ||= 0
+  self.valor_maximo_cop  ||= 0
+end
+
 
 def set_valor_cop
   self.valor_cop = valor_usd * exchange_rate

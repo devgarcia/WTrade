@@ -1,88 +1,106 @@
 <p id="notice"><%= notice %></p>
 
-<div class="datos_ingresados"> 
+<div class="card">
+
+  <div class="headerInitial">
+    <h1 class="text-center mb-4 initialTitle">Calculated Product </h1>
+  </div>
+
+  <div class="datos_ingresados">     
   <h3> Datos ingresados </h3>
+    <p>
+      <br>
+      <strong>Exchange Rate</strong>
+     <%= number_with_delimiter(@product.exchange_rate) %>
+    </p>
 
-  <p>
-    <strong>Exchange Rate</strong>
-    <%= @product.exchange_rate %>
-  </p>
+    <p>
+      <strong>Valor Maximo COP:</strong>
+      <%= number_with_delimiter(@product.valor_maximo_cop) %>
+    </p>
 
-  <p>
-    <strong>Valor Maximo COP:</strong>
-    <%= @product.valor_maximo_cop %>
-  </p>
+    <p>
+      <strong>Valor USD:</strong>
+      <%= number_with_delimiter(@product.valor_usd)%>
+    </p>
 
-  <p>
-    <strong>Valor USD:</strong>
-    <%= @product.valor_usd %>
-  </p>
-
-  <p>
-    <strong>Peso (lb):</strong>
-    <%= @product.peso %>
-  </p>
-</div>
+    <p>
+      <strong>Peso (lb):</strong>
+      <%= number_with_delimiter(@product.peso) %>
+    </p>    
+  </div>
 
 <br>
+<hr>
+<br>
 
-<div div="Datos_calculados"> 
-  <h3> Datos Calculados </h3>
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
-  <p>
-    <strong>Valor COP:</strong>
-    <%= @product.valor_cop %>
-  </p>
+  <div class="datosCalculados">  
+    <h3> Datos Calculados </h3>
+    <p>
+      <strong>Name:</strong>
+      <%= @product.name %>
+    </p>
+    <p>
+      <strong>Valor COP:</strong>
+      <%= number_with_delimiter(@product.valor_cop) %>
+    </p>
 
-  <p>
-    <strong>Impuesto USD:</strong>
-    <%= @product.impuesto %>
-  </p>
+    <p>
+      <strong>Impuesto USD:</strong>
+      <%= number_with_delimiter(@product.impuesto) %>
+    </p>
 
-  <p>
-    <strong>Seguro USD:</strong>
-    <%= @product.seguro %>
-  </p>
+    <p>
+      <strong>Seguro USD:</strong>
+      <%=number_with_delimiter(@product.seguro) %>
+    </p>
 
-  <p>
-    <strong>Flete USD:</strong>
-    <%= @product.flete %>
-  </p>
+    <p>
+      <strong>Flete USD:</strong>
+      <%= number_with_delimiter(@product.flete,) %>
+    </p>
 
-  <p>
-    <strong>Aduana USD:</strong>
-    <%= @product.aduana %>
-  </p>
+    <p>
+      <strong>Aduana USD:</strong>
+      <%= number_with_delimiter(@product.aduana) %>
+    </p>
 
-  <p>
-    <strong>Total Envio USD:</strong>
-    <%= @product.total_envio_usd %>
-  </p>
+    <p>
+      <strong>Total Envio USD:</strong>
+      <%= number_with_delimiter(@product.total_envio_usd) %>
+    </p>
 
-  <p>
-    <strong>Total Envio COP:</strong>
-    <%= @product.total_envio_cop %>
-  </p>
+    <p>
+      <strong>Total Envio COP:</strong>
+      <%= number_with_delimiter(@product.total_envio_cop) %>
+    </p>
 
-  <p>
-    <strong>Total Cost COP:</strong>
-    <%= @product.total_cost %>
-  </p>
+    <p>
+      <strong>Total Cost COP:</strong>
+      <%=number_with_delimiter(@product.total_cost) %>
+    </p>
 
-  <p>
-    <strong>Accion:</strong>
-    <%= @product.accion %>
-  </p>
+    <p>
+      <strong>Accion:</strong>
+      <%= @product.accion %>
+    </p>
 
 
-  <p>
-    <strong>Bought:</strong>
-    <%= @product.bought %>
-  </p>
+    <!-- <p> -->
+      <!-- <strong>Bought:</strong> -->
+      <%#= number_with_delimiter(@product.bought %>
+    <!-- </p> -->
+
+  </div>
 </div>
+<br>
+<br>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<div class="btn-group showButtons" role="group" aria-label="First group">
+  <%= link_to 'Edit', edit_product_path(@product), :class=> "btn btn-primary edit"%> |
+  <%= link_to 'Back', products_path, :class=> "btn btn-primary back" %>
+</div>
+<br>
+<br>
+<br>
+<br>
