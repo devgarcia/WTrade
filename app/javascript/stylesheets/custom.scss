@@ -28,8 +28,12 @@ margin-top: 8%;
   margin-bottom: 10%;
 }
 
+
+
+
 .newComponent {
     padding-right: 25px;
+
 }
 
 .cardInitial {
@@ -39,12 +43,106 @@ margin-top: 8%;
 .headerInitial {
   background-color: #0cad5a;
   color: white;
+  margin-bottom: 10%;
 }
+
 .initialTitle{
   padding-top: 5%;
   padding-bottom: 5%;
 
 }
+
+#product_exchange_rate, #product_valor_maximo_cop, #product_valor_usd, #product_peso, #product_name{
+    text-align: center;
+}
+
+input#product_exchange_rate{
+  text-align: center;
+}
+
+
+
+.col-sm-6.col-form-label {
+    text-align: right;
+}
+
+
+input#product_exchange_rate, input#product_valor_maximo_cop, input#product_valor_usd, input#product_peso,  input#product_name{
+    text-align: center;
+    border-bottom-color: #fff;
+}
+
+
+.form-group.row.row-values {
+    //margin-left: 10% !important;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/*.btn.btn-success {
+  //background-color: #15a815!important;
+  //width: 35%;
+  font-size: 1.3rem
+}*/
+
+.back-products {
+  //background-color: black !important;
+  //margin-left: 45% !important;
+  //margin-right: 45% !important;
+  //margin-bottom: 12% !important;
+  //text-align: center ;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 10%;
+}
+
+.backNewEdit {
+  background-color: black !important;
+  border-color: black !important;
+  //margin-left: 45% !important;
+  //margin-right: 45% !important;
+  //margin-bottom: 12% !important;
+  text-align: center;
+  width: 15%;
+}
+
+
+.btn.btn-primary.edit {
+  background-color: yellow !important;
+  color: black !important;
+  border-color: yellow !important;
+  margin-right: 20% !important;
+}
+
+.back {
+  //margin-left: 20%!important;
+  background-color: black !important;
+  color: white !important;
+  border-color: black !important;
+  font-size: 1.3rem;
+  margin-left: 20% !important;
+}
+
+/*.check {
+    font-size: 1.3rem !important;
+    //padding: 5% !important;
+    width: 15%;
+  }*/
+
+.check {
+    font-size: 1rem !important;
+    width: 25%;
+}
+
+.showButtons{
+   margin-left: 30%;
+}
+
+
 
 .card.cardShow {
     margin-top: 9%;
@@ -56,6 +154,11 @@ margin-top: 8%;
   background-color: #0cad5a !important;
   color: white;
 }
+
+.datos_ingresados, .datosCalculados{
+    margin-left: 30%;
+}
+
 
 .add_subs {
   margin-top: 2.5rem;
@@ -104,6 +207,18 @@ b, strong {
 
 @media (max-width: 767px) and (orientation : portrait) {
 
+.col-sm-6.col-form-label { 
+  text-align: center;
+}
+
+.datos_ingresados, .datosCalculados{
+    margin-left: 15%;
+}
+
+  #product_exchange_rate, #product_valor_maximo_cop, #product_valor_usd, #product_peso, #product_name{
+    margin-left: 20% !important;
+  }
+
 }
 
 /* ========================================================= */
@@ -113,11 +228,6 @@ b, strong {
   input, select, optgroup, textarea {
     font-size: 0.8rem !important;
     max-width: 100%;
-  }
-
-  .btn-submitbutton {
-    margin-top: 20px;
-    font-size: 1rem !important;
   }
 
   .card-body-initial{
@@ -130,13 +240,38 @@ b, strong {
     padding-bottom: 5%;
     font-size: 1.15rem !important;
   }
+
+  .back {
+  background-color: black !important;
+  color: white !important;
+  border-color: black !important;
+  font-size: 1rem !important;
+  }
+
+  .btn.btn-success.check {
+    width: 50%;
+  }
+
+  .backNewEdit {
+    width: none !important;
+    padding-top: 10% !important;
+    padding-bottom: 10% !important;
+  }
+
+  .check {
+    font-size: 1rem !important;
+    padding: 5% !important;
+    width: none !important
+  }
+
+
 }
 
 /* =============================================================== */
 /* ===================MEDIA QUERIES - LANDSCAPE ================== */
 /* =============================================================== */
 
-@media (max-width:800px) and (min-width:500px) {
+@media (max-width:800px) and (min-width:400px) {
   input, select, optgroup, textarea {
     font-size: 0.8rem !important;
     max-width: 100%;
@@ -154,6 +289,27 @@ b, strong {
   .initialTitle {
     font-size: 1.6rem !important;
   }
+
+  .back-products {
+    margin-left: 34% !important;
+    margin-right: 45% !important;
+    margin-bottom: 12% !important;
+  }
+
+  .back {
+  //margin-left: 20%!important;
+  background-color: black !important;
+  color: white !important;
+  border-color: black !important;
+  font-size: 1rem !important;
+  }
+
+  .check {
+    font-size: 1rem !important;
+    padding-top: 4% !important;
+    padding-bottom: 4% !important;
+    width: 25%;
+  }
 }
 
 
@@ -161,7 +317,11 @@ b, strong {
   .initialTitle {
     font-size: 1.9rem !important;
   }
+
+    
 }
+
+
 
 
 

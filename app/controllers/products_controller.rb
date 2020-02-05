@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+ 
+  require 'nokogiri'
+  require 'open-uri'
+
   # GET /products
   # GET /products.json
   def index
@@ -15,10 +19,20 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    require 'openssl'
+    doc = Nokogiri::HTML(open('https://freecurrencyrates.com/en/convert-USD-COP/fcr', :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
+    #puts doc
+    @formattedrate = doc.css('span.src-entry-to').text 
+    #render template: 'parallel/home'
   end
 
   # GET /products/1/edit
   def edit
+    #@product = Product.new
+    require 'openssl'
+    doc = Nokogiri::HTML(open('https://freecurrencyrates.com/en/convert-USD-COP/fcr', :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
+    ##puts doc
+    @formattedrate = doc.css('span.src-entry-to').text
   end
 
   # POST /products
@@ -40,6 +54,8 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+     
+
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
