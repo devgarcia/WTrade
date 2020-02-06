@@ -33,7 +33,7 @@
           <% @products.each do |product| %>
             <tr>
               <td><%= product.name %></td>
-              <td><%= number_to_currency(product.exchange_rate, format: "%n")  %></td>
+              <td><%= number_to_currency(product.exchange_rate, format: "%n") %></td>
               <td><%= number_to_currency(product.valor_usd, format: "%n") %></td>
               <td><%= number_to_currency(product.valor_cop, format: "%n") %></td>
               <td><%= number_to_currency(product.impuesto, format: "%n") %></td>
