@@ -33,18 +33,21 @@
           <% @products.each do |product| %>
             <tr>
               <td><%= product.name %></td>
-              <td><%= product.exchange_rate %></td>
-              <td><%= product.valor_usd %></td>
-              <td><%= product.valor_cop %></td>
-              <td><%= product.impuesto %></td>
-              <td><%= product.seguro %></td>
-              <td><%= product.peso %></td>
-              <td><%= product.flete %></td>              
-              <td><%= product.aduana %></td>
-              <td><%= product.total_envio_usd %></td>
-              <td><%= product.total_envio_cop %></td>–              
-              <td><%= product.total_cost %></td>
-              <td><%= product.valor_maximo_cop %></td>
+              <td><%= number_to_currency(product.exchange_rate, format: "%n")  %></td>
+              <td><%= number_to_currency(product.valor_usd, format: "%n") %></td>
+              <td><%= number_to_currency(product.valor_cop, format: "%n") %></td>
+              <td><%= number_to_currency(product.impuesto, format: "%n") %></td>
+              <td><%= number_to_currency(product.seguro, format: "%n") %></td>
+              <td><%= number_with_delimiter(product.peso) %></td>
+              <td><%= number_to_currency(product.flete, format: "%n") %></td>              
+              <td><%= number_to_currency(product.aduana, format: "%n") %></td>
+              <td><%= number_to_currency(product.total_envio_usd, format: "%n") %></td>
+
+              <td><%= number_to_currency(product.total_envio_cop, format: "%n") %></td> 
+
+              <td><%= number_to_currency(product.total_cost, format: "%n") %></td>
+              <td><%= number_to_currency(product.valor_maximo_cop, format: "%n") %></td>
+
               <td><%= product.accion %></td>
               <td><%= product.bought %></td>
               
@@ -61,3 +64,8 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+<br>
+<br>
+<br>
+<br>
+

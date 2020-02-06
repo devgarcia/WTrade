@@ -21,18 +21,14 @@ class ProductsController < ApplicationController
     @product = Product.new
     require 'openssl'
     doc = Nokogiri::HTML(open('https://freecurrencyrates.com/en/convert-USD-COP/fcr', :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
-    #puts doc
-    @formattedrate = doc.css('span.src-entry-to').text 
-    #render template: 'parallel/home'
+    @rate = doc.css('span.src-entry-to').text 
   end
 
   # GET /products/1/edit
-  def edit
-    #@product = Product.new
+  def edit    
     require 'openssl'
     doc = Nokogiri::HTML(open('https://freecurrencyrates.com/en/convert-USD-COP/fcr', :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
-    ##puts doc
-    @formattedrate = doc.css('span.src-entry-to').text
+    @rate = doc.css('span.src-entry-to').text
   end
 
   # POST /products

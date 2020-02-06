@@ -67,24 +67,23 @@
 
     <p>
       <strong>Total Envio USD:</strong>
-      <%= number_with_delimiter(@product.total_envio_usd) %>
+      <%= number_to_currency(@product.total_envio_usd, format: "%n")%>
     </p>
 
     <p>
       <strong>Total Envio COP:</strong>
-      <%= number_with_delimiter(@product.total_envio_cop) %>
+      <%= number_to_currency(@product.total_envio_cop, format: "%n") %>
     </p>
 
     <p>
       <strong>Total Cost COP:</strong>
-      <%=number_with_delimiter(@product.total_cost) %>
+      <%= number_to_currency(@product.total_cost, format: "%n") %>
     </p>
 
     <p>
       <strong>Accion:</strong>
       <%= @product.accion %>
     </p>
-
 
     <!-- <p> -->
       <!-- <strong>Bought:</strong> -->

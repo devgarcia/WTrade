@@ -10,28 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_04_090649) do
+ActiveRecord::Schema.define(version: 2020_02_06_100927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.float "valor_usd"
-    t.float "valor_cop"
-    t.float "impuesto"
-    t.float "seguro"
-    t.float "flete"
-    t.float "aduana"
-    t.float "total_envio_usd"
-    t.float "total_envio_cop"
+    t.decimal "valor_usd"
+    t.decimal "valor_cop"
+    t.decimal "impuesto"
+    t.decimal "seguro"
+    t.decimal "flete"
+    t.decimal "aduana"
+    t.decimal "total_envio_usd"
+    t.decimal "total_envio_cop"
     t.string "accion"
     t.boolean "bought"
-    t.float "valor_maximo_cop"
+    t.decimal "valor_maximo_cop"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.float "peso"
-    t.float "total_cost"
+    t.decimal "total_cost"
     t.float "exchange_rate"
   end
 

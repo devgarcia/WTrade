@@ -1,18 +1,6 @@
 class Product < ApplicationRecord
 
 
-#valor_usd
-#valor_cop
-#impuesto
-#seguro
-#flete
-#aduana
-#total_envio_cop
-#total_envio_cop
-#accion
-#bought
-#valor_maximo_cop
-
 before_save :set_impuesto
 before_save :set_seguro
 before_save :set_flete
@@ -68,7 +56,7 @@ def set_action
   if set_total_cost <= valor_maximo_cop
     self.accion = "COMPRAR"
   else
-    self.accion = "MAMANDO"
+    self.accion = "NO COMPRAR"
   end
 end
 
