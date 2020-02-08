@@ -5,13 +5,28 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Lighthouse Details -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#C50001"/>
+
+    <!-- Given by the Web App Manifest Generator -->
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Given by the Web App Manifest Generator -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="WT">
+    <meta name="apple-mobile-web-app-title" content="WT">
+    <meta name="theme-color" content="#070bf5">
+    <meta name="msapplication-navbutton-color" content="#070bf5">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/"> 
+
+    <!-- Provides link to apple-touch-icon -->
+    <link rel="apple-touch-icon" href="/assets/images/wt-apple-icon-192.png"> 
+  
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-   <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0"> 
-
   </head>
 
   <body>

@@ -17,6 +17,9 @@
     <div class="headerInitial">
       <h1 class="text-center mb-4 initialTitle">Calculate Product </h1>
     </div>
+
+
+
  
     <div class="form-group row row-values">      
         <%= form.label :name, "Exchange Rate (USD-COP)",  :class =>"col-sm-6 col-form-label" %>
@@ -25,13 +28,13 @@
 
     <div class="form-group row row-values">
       <%= form.label :name, "Valor Maximo COP", :class =>"col-sm-6 col-form-label" %>
-      <%= form.text_field :valor_maximo_cop %>
+      <%= form.text_field :valor_maximo_cop%>
 
         <!-- f.number_field :amount, value: number_to_currency(f.object.amount.to_f, delimiter: '', unit: ''), step: :any -->
     </div>
 
     <div class="form-group row row-values">
-      <%= form.label :name, "Valor Real USD",  :class =>"col-sm-6 col-form-label" %>
+      <%= form.label :name, "Valor Producto USD",  :class =>"col-sm-6 col-form-label" %>
         <%= form.text_field :valor_usd %>
     </div>
 
