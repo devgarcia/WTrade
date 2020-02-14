@@ -1,0 +1,44 @@
+// Make sure all inputs are set to 0
+$("#product_valor_maximo_cop").val("0")
+$("#product_valor_usd").val("0")
+$("#product_peso").val("0")
+$("#product_name").val(" ")
+
+//Remove the index table
+$(".indexTable").remove()
+
+// Add New form from Index 
+$(".newFormFromIndex").append('<%= j render("form") %>')   //.show()
+
+
+
+
+
+
+
+
+// CORRECTO
+// 
+// 
+//Make sure all inputs are set to 0
+// $("#product_valor_maximo_cop").val("0")
+// $("#product_valor_usd").val("0")
+// $("#product_peso").val("0")
+// $("#product_name").val(" ")
+// 
+//Remove the index table
+// $(".indexTable").hide()   //.remove()
+// 
+//Shows the _form for New view 
+// $(".primerForm").show()
+// 
+//Show the new form card 
+// $(".cardInitial").show()
+// 
+// 
+
+
+
+
+//When the creation comes from the index New Product link
+//$('.showAjax').show()
