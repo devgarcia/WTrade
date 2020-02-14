@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_open_ssl, only: [:new, :edit]
  
   require 'nokogiri'
   require 'open-uri'
@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all    
   end
 
   # GET /products/1
@@ -19,16 +19,16 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-    require 'openssl'
-    doc = Nokogiri::HTML(open('https://freecurrencyrates.com/en/convert-USD-COP/fcr', :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
-    @rate = doc.css('span.src-entry-to').text 
+    #require 'openssl'
+    #doc = Nokogiri::HTML(open('https://freecurrencyrates.com/en/convert-USD-COP/fcr', :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
+    #@rate = doc.css('span.src-entry-to').text 
   end
 
   # GET /products/1/edit
   def edit    
-    require 'openssl'
-    doc = Nokogiri::HTML(open('https://freecurrencyrates.com/en/convert-USD-COP/fcr', :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
-    @rate = doc.css('span.src-entry-to').text
+    #require 'openssl'
+    #doc = Nokogiri::HTML(open('https://freecurrencyrates.com/en/convert-USD-COP/fcr', :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
+    #@rate = doc.css('span.src-entry-to').text
   end
 
   # POST /products
@@ -40,9 +40,11 @@ class ProductsController < ApplicationController
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -56,9 +58,11 @@ class ProductsController < ApplicationController
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -70,6 +74,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
+      format.js
     end
   end
 
@@ -77,6 +82,12 @@ class ProductsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
+    end
+
+    def set_open_ssl
+      require 'openssl'
+      doc = Nokogiri::HTML(open('https://freecurrencyrates.com/en/convert-USD-COP/fcr', :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
+      @rate = doc.css('span.src-entry-to').text 
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

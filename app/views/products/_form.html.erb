@@ -1,10 +1,11 @@
-<%= form_with(model: product, local: true) do |form| %>
-  <% if product.errors.any? %>
+<div class="primerForm">
+<%= form_with(model: @product ) do |form| %>
+  <% if @product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
       <ul>
-        <% product.errors.full_messages.each do |message| %>
+        <% @product.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -12,143 +13,53 @@
   <% end %>
  
 
-
-
-
-
-
-
-
-
 <div class="cardInitial">
   <div class="card">
-<!--     <div class="headerInitial">
-      <%#= image_tag("WTradelogo-2.png", :style =>"width: 18rem;", :alt => "WTrade Logo", :class =>"card-img-top") %>
-      <h1 class="text-center mb-4 initialTitle">Calculate Product </h1>
-    </div> -->
+    <div class="headerInitial">
 
- <div class="headerInitial">
-    
-   <!--  <h1 class="text-center initialTitle">W </h1>
-    <h1 class="text-center initialTitle">W Trade</h1>
+      <div class="logo text-center"> 
+          <%= image_tag("WTradelogo-2.png", width: "120", height: "100", :alt => "WTrade Logo") %>
+      </div>
 
-    <h1 class="text-center mb-4 initialTitle">Calculate Product </h1> -->
+      <h1 class="text-center mb-1 initialTitle">Calculate Product </h1>
+    </div>
 
-<div class="logo text-center"> 
-    <%= image_tag("WTradelogo-2.png", width: "120", height: "100", :alt => "WTrade Logo") %>
+      <div class="form-group row row-values">      
+          <%= form.label :name, "Exchange Rate (USD-COP)",  :class =>"col-sm-6 col-form-label" %>
+          <%= form.text_field :exchange_rate, :value =>"#{@rate}" %>     
+      </div>
+
+      <div class="form-group row row-values">
+        <%= form.label :name, "Valor Maximo COP", :class =>"col-sm-6 col-form-label" %>
+        <%= form.text_field :valor_maximo_cop%>
+
+          <!-- f.number_field :amount, value: number_to_currency(f.object.amount.to_f, delimiter: '', unit: ''), step: :any -->
+      </div>
+
+      <div class="form-group row row-values">
+        <%= form.label :name, "Valor Producto USD",  :class =>"col-sm-6 col-form-label" %>
+          <%= form.text_field :valor_usd %>
+      </div>
+
+      <div class="form-group row row-values">
+       <%= form.label :name, "Peso (lb)",  :class =>"col-sm-6 col-form-label" %>
+       <%= form.text_field :peso %>
+      </div>
+
+      <div class="form-group row row-values">
+        <%= form.label :name, :class =>"col-sm-6 col-form-label" %>
+        <%= form.text_field :name %>
+      </div>
+
+      <br>
+      <div class="actions">
+        <%= form.submit "Check !", :class=> "btn btn-success check", :remote => true %>
+      </div>
+  <% end %>
+      <div class="back-products" > 
+        <%= link_to 'All Products', products_path, :remote => true  %>
+      </div>
+      </div>
+  </div>
 </div>
-
-<h1 class="text-center mb-1 initialTitle">Calculate Product </h1>
-    </div>
-
-    <div class="form-group row row-values">      
-        <%= form.label :name, "Exchange Rate (USD-COP)",  :class =>"col-sm-6 col-form-label" %>
-        <%= form.text_field :exchange_rate, :value =>"#{@rate}" %>     
-    </div>
-
-    <div class="form-group row row-values">
-      <%= form.label :name, "Valor Maximo COP", :class =>"col-sm-6 col-form-label" %>
-      <%= form.text_field :valor_maximo_cop%>
-
-        <!-- f.number_field :amount, value: number_to_currency(f.object.amount.to_f, delimiter: '', unit: ''), step: :any -->
-    </div>
-
-    <div class="form-group row row-values">
-      <%= form.label :name, "Valor Producto USD",  :class =>"col-sm-6 col-form-label" %>
-        <%= form.text_field :valor_usd %>
-    </div>
-
-    <div class="form-group row row-values">
-     <%= form.label :name, "Peso (lb)",  :class =>"col-sm-6 col-form-label" %>
-     <%= form.text_field :peso %>
-    </div>
-
-    <div class="form-group row row-values">
-      <%= form.label :name, :class =>"col-sm-6 col-form-label" %>
-      <%= form.text_field :name %>
-    </div>
-
-    <br>
-    <div class="actions">
-      <%= form.submit "Check !", :class=> "btn btn-success check" %>
-    </div>
-<% end %>
-
-<%#= link_to 'Back', products_path, :class=> "btn btn-danger"%>
-<div class="back-products" > 
-  <%= link_to 'Back to Products', products_path %>
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- <div class="card" style="width: 50%;"> -->
-
-
-
-<!-- 
-
-  <div class="form-group"> 
-    <%#= form.label :name %>
-    <%#= form.text_field :name %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :name, "Valor USD" %>
-    <%#= form.text_field :valor_usd %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :name, "Valor COP" %>
-    <%#= form.text_field :valor_cop %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :impuesto %>
-    <%#= form.text_field :impuesto %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :seguro %>
-    <%#= form.text_field :seguro %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :flete %>
-    <%#= form.text_field :flete %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :aduana %>
-    <%#= form.text_field :aduana %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :name, "Total Envio USD" %>
-    <%#= form.text_field :total_envio_usd %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :name, "Total Envio COP"%>
-    <%#= form.text_field :total_envio_cop %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :accion %>
-    <%#= form.text_field :accion %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :bought %>
-    <%#= form.check_box :bought %>
-  </div>
-
-  <div class="form-group"> 
-    <%#= form.label :name, "Valor Maximo COP"%>
-    <%#= form.text_field :valor_maximo_cop %>
-  </div>
- -->
 

@@ -7,15 +7,16 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
+require("channels")
+require("jquery")
 
 import 'bootstrap'
 import '../stylesheets/application'
 
-document.addEventListener("turbolinks:load", () => { 
-  $('[data-toggle="tooltip"]').tooltip();
-  $('[data-toggle="popover"]').popover();
-});
+// document.addEventListener("turbolinks:load", () => { 
+//   $('[data-toggle="tooltip"]').tooltip();
+//   $('[data-toggle="popover"]').popover();
+// });
 
 
 if (navigator.serviceWorker) {
