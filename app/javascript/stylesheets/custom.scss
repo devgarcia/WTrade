@@ -28,8 +28,9 @@ margin-top: 8%;
   margin-bottom: 10%;
 }
 
-
-
+.strong {
+  font-weight: 550;
+}
 
 .newComponent {
     padding-right: 25px;
@@ -252,17 +253,26 @@ th#name, td#name {
 }
 
   #product_exchange_rate, #product_valor_maximo_cop, #product_valor_usd, #product_peso, #product_name{
-    margin-left: 25% !important;
+    margin-left: 30% !important;
   }
 
   .showButtons {
     margin-left: 15% !important;
   }
 
+th#name, td#name {
+  padding-left: 4% !important;
+  width: 30px !important;
+}
+
 .edit, .check, .back{
     width: 50%;
     margin-top: 7.5%;
     margin-bottom: 8.5%;
+}
+
+.cardInitial {
+    margin: 0% !important;
 }
 
 }
