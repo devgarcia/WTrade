@@ -3,7 +3,10 @@
 
 $(".showAjax").hide() // If user on first show after creating product
 
-
+$("#product_valor_maximo_cop").val("0")
+$("#product_valor_usd").val("0")
+$("#product_peso").val("0")
+$("#product_name").val(" ")
 
 
 $(".cardShow").hide() // If user on show after updating product
@@ -17,4 +20,12 @@ $(".cardInitial").hide()
 $(".cardInitial22").hide() //new addition
 //
 //
+
+
 $(".indexCard").append('<%= j render("index") %>')
+
+
+// $(document).ready(function() {
+    
+//         location.reload();
+// });

@@ -10,33 +10,32 @@
 
 
   <div class="en_resumen">     
-  <h3> En Resumen </h3>
-  <br>
-  <p>
-    <strong>Total Cost COP:</strong>
-      <%= number_to_currency(@product.total_cost, format: "%n") %>
-    </p>
-
+    <h3> Resumen </h3>
+    <br>
     <p>
-      <strong>Accion:</strong>
-      <%= @product.accion %>
+        <strong>Decisión:</strong>
+        <%= @product.accion %>
+      </p>
+    <p>
+      <strong>Valor Maximo COP:</strong>
+      <%= number_with_delimiter(@product.valor_maximo_cop) %>
+    </p>
+    <p>
+      <strong>Total Cost COP:</strong>
+        <%= number_to_currency(@product.total_cost, format: "%n") %>
     </p>
   </div>
   <br>
+  <br>
     <hr>
   <br>
-
+  <br>
   <div class="datos_ingresados">     
   <h3> Datos ingresados </h3>
     <p>
       <br>
       <strong>Exchange Rate</strong>
      <%= number_with_delimiter(@product.exchange_rate) %>
-    </p>
-
-    <p>
-      <strong>Valor Maximo COP:</strong>
-      <%= number_with_delimiter(@product.valor_maximo_cop) %>
     </p>
 
     <p>
@@ -102,14 +101,24 @@
 
   </div>
 
-
+   <hr>
 
 <br>
 <br>
 
-<div class="btn-group showButtons" role="group" aria-label="First group">
-  <%= link_to 'Edit', edit_product_path(@product), :class=> "btn btn-primary edit", :remote =>  true %> |
-  <%= link_to 'Back to Products', products_path, :class=> "btn btn-primary back", :remote =>  true %>
+<!-- <div class="btn-group showButtons" role="group" aria-label="First group"> -->
+<div class="buttonEdit d-flex justify-content-center">  
+  <%= link_to 'Edit', edit_product_path(@product), :class=> "btn btn-primary edit", :remote =>  true %> 
+</div>
+
+
+<div class="backProducts d-flex justify-content-center">
+  <%= link_to 'Products', products_path, :class=> "btn btn-primary back", :remote => true %>
+</div>
+
+
+<div class="buttonAllProducts d-flex justify-content-center ">
+  <%#= link_to 'All Products', products_path, :class=> "btn btn-primary back", :remote =>  true %>
 </div>
 <br>
 </div>
