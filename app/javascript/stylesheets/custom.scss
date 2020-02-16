@@ -1,6 +1,7 @@
 .container2 {
   margin-top: 3%;
   width: 100%;
+  padding-left: 2% !important;
 }
 
 .navbar-nav.navLinks a{
@@ -231,6 +232,9 @@ th#name, td#name {
   text-overflow: ellipsis;
 }
 
+.indexCard {
+    margin-left: 13%;
+}
 
 /* ========================================================= */
 /* ================  MEDIA QUERIES - PORTRAIT ============== */
@@ -386,7 +390,6 @@ th#name, td#name {
     font-size: 1rem !important;
     width: 30%;
   }
-
 
 }
 
