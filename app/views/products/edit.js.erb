@@ -1,3 +1,7 @@
 $(".cardShow").hide()
 $(".indexTable").hide()
 $(".editCard").append('<%= j render("formPut") %>')  //.show()
+
+$('html, body').animate({
+	scrollTop: $("#product_exchange_rate").offset().top
+});
