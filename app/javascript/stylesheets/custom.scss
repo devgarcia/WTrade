@@ -220,8 +220,17 @@ div#newProduct {
 }
 
 th#name, td#name {
-    padding-left: 2.1%;
+ padding-left: 4% !important;
 }
+
+
+.table tbody tr td{
+  max-width:200px; /* Customise it accordingly */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 /* ========================================================= */
 /* ================  MEDIA QUERIES - PORTRAIT ============== */
@@ -261,8 +270,10 @@ th#name, td#name {
   }
 
 th#name, td#name {
-  padding-left: 4% !important;
-  width: 30px !important;
+  padding-left: 2% !important;
+  width: 10% !important;
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
 
 .edit, .check, .back{
