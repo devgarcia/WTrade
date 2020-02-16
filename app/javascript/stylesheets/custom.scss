@@ -78,7 +78,6 @@ input#product_exchange_rate, input#product_valor_maximo_cop, input#product_valor
 }
 
 .actions {
-    text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -103,9 +102,6 @@ input#product_exchange_rate, input#product_valor_maximo_cop, input#product_valor
 .backNewEdit {
   background-color: black !important;
   border-color: black !important;
-  //margin-left: 45% !important;
-  //margin-right: 45% !important;
-  //margin-bottom: 12% !important;
   text-align: center;
   width: 15%;
 }
@@ -114,28 +110,20 @@ input#product_exchange_rate, input#product_valor_maximo_cop, input#product_valor
 .btn.btn-primary.edit {
   background-color: yellow !important;
   color: black !important;
-  border-color: yellow !important;
-  margin-right: 20% !important;
+  border-color: #d6f107!important;
 }
 
 .back {
-  //margin-left: 20%!important;
   background-color: black !important;
   color: white !important;
   border-color: black !important;
-  font-size: 1.3rem;
-  margin-left: 20% !important;
+  //font-size: 1.3rem;
 }
 
-/*.check {
-    font-size: 1.3rem !important;
-    //padding: 5% !important;
-    width: 15%;
-  }*/
 
 .check {
-    font-size: 1rem !important;
-    width: 25%;
+    //font-size: 1.4rem !important;
+    //width: 30%;
 }
 
 .showButtons{
@@ -155,8 +143,8 @@ input#product_exchange_rate, input#product_valor_maximo_cop, input#product_valor
   color: white;
 }
 
-.datos_ingresados, .datosCalculados{
-    margin-left: 30%;
+.datos_ingresados, .datosCalculados, .en_resumen{
+    margin-left: 40%;
 }
 
 
@@ -170,25 +158,69 @@ input#product_exchange_rate, input#product_valor_maximo_cop, input#product_valor
    
 }
 
+.backProducts {
+  margin-bottom: 8%;
+}
+
 .btn-submitbutton {
   color:white !important;
   background-color:#0844f9 !important;
 }
 
-.show, .edit{
-  margin-right: 3%;
+
+.buttonEdit {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
+.edit, .check, .back{
+  font-size: 1.25rem !important;
+  width: 30%;
+}
+
+.buttonAllProducts {
+    margin-bottom: 5%;
+}
+
+.back {
+  width: 30%;
+}
+
+
 
 .showBack {
   margin-left: 3%;
 }
 
 b, strong {
-    font-weight: bolder;
-    margin-right: 2%;
+  font-weight: bolder;
+  margin-right: 2%;
+}
+
+/* INDEX */
+
+h1#h1Products {
+    margin-bottom: 1% !important;
+}
+
+div#newProduct {
+ margin-top: 5%;
+ margin-bottom: 5%;
 }
 
 
+.lnkNewProduct {
+    width: 30%;
+    font-size: 1rem !important;
+}
+
+.table-responsive.tindex {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+th#name, td#name {
+    padding-left: 2.1%;
+}
 
 /* ========================================================= */
 /* ================  MEDIA QUERIES - PORTRAIT ============== */
@@ -201,6 +233,10 @@ b, strong {
     font-size: 1.7rem !important;
   }
 
+  .edit, .check, .back {
+      font-size: 1.1rem !important;
+  }
+
 }
 
 /* ========================================================= */
@@ -211,17 +247,23 @@ b, strong {
   text-align: center;
 }
 
-.datos_ingresados, .datosCalculados{
+.datos_ingresados, .datosCalculados, .en_resumen{
     margin-left: 15%;
 }
 
   #product_exchange_rate, #product_valor_maximo_cop, #product_valor_usd, #product_peso, #product_name{
-    margin-left: 20% !important;
+    margin-left: 25% !important;
   }
 
   .showButtons {
     margin-left: 15% !important;
   }
+
+.edit, .check, .back{
+    width: 50%;
+    margin-top: 7.5%;
+    margin-bottom: 8.5%;
+}
 
 }
 
@@ -264,8 +306,21 @@ b, strong {
 
   .check {
     font-size: 1rem !important;
-    padding: 5% !important;
     width: none !important
+  }
+
+  .lnkNewProduct {
+    width: 50%;
+    font-size: 1rem !important;
+  }
+
+  div#newProduct {
+      margin-top: 5%;
+      margin-bottom: 15%;
+  }
+
+  .actions {
+    margin-bottom: 0 !important;
   }
 
 
@@ -300,30 +355,35 @@ b, strong {
     margin-bottom: 12% !important;
   }
 
-  .back {
-  //margin-left: 20%!important;
+  .back {  
   background-color: black !important;
   color: white !important;
-  border-color: black !important;
-  font-size: 1rem !important;
+  border-color: black !important;  
   }
 
-  .check {
+  .edit, .check, .back {
     font-size: 1rem !important;
-    padding-top: 4% !important;
-    padding-bottom: 4% !important;
-    width: 25%;
+    width: 30%;
   }
+
+
 }
 
 
-@media (min-width:802px) and (max-width:1800px) {
+@media (min-width:802px) and (max-width:1200px) {
   .initialTitle {
     font-size: 1.9rem !important;
   }
 
+  .edit, .check, .back{
+    font-size: 1rem !important;
+    width: 30% !important;
+  }
+
     
 }
+
+
 
 
 

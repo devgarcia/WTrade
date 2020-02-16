@@ -1,21 +1,12 @@
+ // $(document).ready(function() {
+    
+
+ // });
+
 $('#product_<%= @product.id %>').remove();
 
-
-// $("#product_<%= @product.id %>").hide();
-//$(".destroy").append('<%= j render("index") %>');
-
-
-// $(document).on("ajax:succes", "a", function(data){
-//     $(data.id).remove();
-// });
-
-// $('#product_<%= @product.id %>').click(function(){
-//     $(this).remove();
-//     //return false;
-// });
-
-//$(".destroy").append('<%= j render("index") %>')
+$(".indexTable").remove()
+$(".destroy").append('<%= j render("index") %>');
 
 
-//$(".destroy").append('<%= j render("index") %>');
 

@@ -19,7 +19,7 @@
         <%= image_tag("WTradelogo-2.png", width: "120", height: "100", :alt => "WTrade Logo") %>
     </div>
 
-    <h1 class="text-center mb-1 initialTitle">Calculate Product </h1>
+    <h1 class="text-center mb-1 initialTitle">Update Calculation Product </h1>
         </div>
 
         <div class="form-group row row-values">      
@@ -50,12 +50,14 @@
         </div>
 
         <br>
-        <div class="actions">
+        <div class="actions d-flex justify-content-center">
           <%= form.submit "Update!", :class=> "btn btn-success check", :remote =>  true %>
         </div>
+
+
     <% end %>
-    <div class="back-products" > 
-      <%= link_to 'Back to Products', products_path, :remote =>  true  %>
+    <div class="backProducts d-flex justify-content-center">
+      <%= link_to 'Products', products_path, :class=> "btn btn-primary back", :remote => true %>
     </div>
   </div>
 </div>
