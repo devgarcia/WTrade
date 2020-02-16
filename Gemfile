@@ -35,6 +35,8 @@ gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 # Helps formating number user inputs
 #gem 'autonumeric-rails'
 
+#gem 'jquery_mask_rails', '~> 0.1.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

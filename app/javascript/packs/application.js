@@ -9,7 +9,10 @@ require("@rails/activestorage").start()
 require("channels")
 require("channels")
 require("jquery")
+//require ("autonumeric")
 
+
+//import 'autonumeric'
 import 'bootstrap'
 import '../stylesheets/application'
 
@@ -32,6 +35,11 @@ if (navigator.serviceWorker) {
 //import 'autonumeric'
 // require 'jquery'
 // require'autonumeric'
+
+// $(document).ready(function(){
+	// $('#valor_maximo_cop').mask('000.000.000.000.000,00', {reverse: true});
+// });
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
