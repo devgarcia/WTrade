@@ -1,16 +1,16 @@
-
-
 $('#product_<%= @product.id %>').remove();
-$(".indexTable").remove()
-$(".destroy").append('<%= j render("index") %>');
+$(document).ready(function() {    
+	$('#product_<%= @product.id %>').remove();
+});
 
 
 
 
 
+//$('#product_<%= @product.id %>').remove();
+//$(".indexCard").remove()
+//$(".destroy").append('<%= j render("index") %>');
+//$(".indexCard").append('<%= j render("index") %>')
 
 
- // $(document).ready(function() {
-    
 
- // });
