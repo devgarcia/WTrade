@@ -4,3 +4,6 @@ $('.showAjax').show()
 $('.showAjax').append('<%= j render(@product) %>')  //.show()
 
 
+$('html, body').animate({
+	scrollTop: $("#resumen").offset().top
+});
