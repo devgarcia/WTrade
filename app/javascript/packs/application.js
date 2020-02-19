@@ -9,17 +9,11 @@ require("@rails/activestorage").start()
 require("channels")
 require("channels")
 require("jquery")
-//require ("autonumeric")
 
 
-//import 'autonumeric'
 import 'bootstrap'
 import '../stylesheets/application'
 
-// document.addEventListener("turbolinks:load", () => { 
-//   $('[data-toggle="tooltip"]').tooltip();
-//   $('[data-toggle="popover"]').popover();
-// });
 
 
 if (navigator.serviceWorker) {
@@ -31,3 +25,9 @@ if (navigator.serviceWorker) {
 }
 
 
+
+
+// document.addEventListener("turbolinks:load", () => { 
+//   $('[data-toggle="tooltip"]').tooltip();
+//   $('[data-toggle="popover"]').popover();
+// });

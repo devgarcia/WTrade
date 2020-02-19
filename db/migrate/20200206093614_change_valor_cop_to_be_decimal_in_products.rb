@@ -12,6 +12,7 @@ class ChangeValorCopToBeDecimalInProducts < ActiveRecord::Migration[6.0]
       t.change :total_envio_usd, :decimal
       t.change :total_envio_cop, :decimal
       t.change :valor_maximo_cop, :decimal
+      #
     end
   end
 
@@ -26,6 +27,7 @@ class ChangeValorCopToBeDecimalInProducts < ActiveRecord::Migration[6.0]
       t.change :total_envio_usd, :float
       t.change :total_envio_cop, :float
       t.change :valor_maximo_cop, :float
+      
     end
   end
 
