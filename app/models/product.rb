@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
 
 
-#before_save :set_values
+before_save :set_values
 before_save :set_impuesto
 before_save :set_seguro
 before_save :set_flete
@@ -16,16 +16,16 @@ after_initialize :init
 
 def init
   self.exchange_rate = exchange_rate
-  self.valor_usd  ||= 0
-  self.peso ||= 0
-  self.valor_maximo_cop ||= 0
+  self.valor_usd  ||= ""
+  self.peso ||= ""
+  self.valor_maximo_cop ||= ""
 end
 
-# def set_values
-#   self.valor_usd  ||= 0
-#   self.peso ||= 0
-#   self.valor_maximo_cop  ||= 0
-# end 
+def set_values
+  self.valor_usd  ||= 0
+  self.peso ||= 0
+  self.valor_maximo_cop  ||= 0
+end 
 
 def set_valor_cop
   self.valor_cop = valor_usd * exchange_rate
