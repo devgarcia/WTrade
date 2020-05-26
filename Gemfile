@@ -32,7 +32,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 #Added Gems
 # Helps calling external websites
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
-gem "actionview", ">= 6.0.2.2"
+#gem "actionview", ">= 6.0.2.2"
 
 
 
