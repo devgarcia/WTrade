@@ -58,6 +58,7 @@ margin-top: 8%;
     text-align: center;
 }
 
+
 input#product_exchange_rate{
   text-align: center;
 }
@@ -220,10 +221,6 @@ div#newProduct {
     margin-bottom: 4%;
 }
 
-th#name, td#name {
- padding-left: 4% !important;
-}
-
 
 .table tbody tr td{
   max-width:200px; /* Customise it accordingly */
@@ -272,20 +269,14 @@ th#name, td#name {
     margin-left: 15%;
 }
 
-  #product_exchange_rate, #product_valor_maximo_cop, #product_valor_usd, #product_peso, #product_name{
+  #product_exchange_rate, #product_valor_maximo_cop, #product_valor_usd, #product_peso, #product_name {
     margin-left: 30% !important;
   }
+
 
   .showButtons {
     margin-left: 15% !important;
   }
-
-th#name, td#name {
-  padding-left: 4% !important;
-  width: 10% !important;
-  overflow: hidden;
-  text-overflow: ellipsis; 
-}
 
 .edit, .check, .back{
     width: 50%;
