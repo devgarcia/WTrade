@@ -4,25 +4,23 @@
 <div class="card cardShow">
 
   <div class="headerInitial">
-    
     <h1 class="text-center mb-4 initialTitle">Calculated Product </h1>
   </div>
-
 
   <div class="en_resumen">     
     <h3 id="resumen"> Resumen </h3>
     <br>
     <p>
-        <strong>Decisión:</strong>
+     <strong>Decisión:</strong>
         <%= @product.accion %>
-      </p>
+    </p>
     <p>
       <strong>Valor Maximo COP:</strong>
       <%= number_with_delimiter(@product.valor_maximo_cop) %>
     </p>
     <p>
       <strong>Total Cost COP:</strong>
-        <%= number_to_currency(@product.total_cost, format: "%n") %>
+      <%= number_to_currency(@product.total_cost, format: "%n") %>
     </p>
   </div>
   <br>
