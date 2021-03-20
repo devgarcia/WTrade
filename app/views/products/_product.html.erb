@@ -91,12 +91,6 @@
       <strong>Total Envio COP:</strong>
       <%= number_to_currency(@product.total_envio_cop, format: "%n") %>
     </p>    
-
-    <!-- <p> -->
-      <!-- <strong>Bought:</strong> -->
-      <%#= number_with_delimiter(@product.bought %>
-    <!-- </p> -->
-
   </div>
 
    <hr>
@@ -108,10 +102,6 @@
 <div class="buttonEdit d-flex justify-content-center">  
   <%= link_to 'Edit', edit_product_path(@product), :class=> "btn btn-primary edit", :remote =>  true %> 
 </div>
-
-<!-- <div id="newProduct" >
-  <%#= link_to 'New Product', new_product_path, :class=> "btn btn-primary lnkNewProduct", :remote => true %>
-</div> -->
 
 <div class="backProducts d-flex justify-content-center">
   <%= link_to 'Products', products_path, :class=> "btn btn-primary back", :remote => true %>
