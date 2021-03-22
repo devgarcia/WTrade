@@ -18,6 +18,7 @@
 !/storage/.keep
 
 /public/assets
+/public/service-worker.js
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
