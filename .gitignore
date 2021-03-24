@@ -17,10 +17,10 @@
 /storage/*
 !/storage/.keep
 
-/public/assets
+#/public/assets
 /public/*.js
 /public/*.js.map
-/public/service-worker.js
+#/public/service-worker.js
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
