@@ -1,6 +1,11 @@
-const { environment } = require('@rails/webpacker')
+//const { environment } = require('@rails/webpacker') Commented out to favor PWA
+const { config, environment, Environment } = require('@rails/webpacker');
+const { resolve } = require('path');
+const WebpackerPwa = require('webpacker-pwa');
+new WebpackerPwa(config, environment);
 
 const webpack = require('webpack')
+
 environment.plugins.prepend('Provide', 
 	new webpack.ProvidePlugin({
     $: 'jquery/src/jquery',
@@ -10,3 +15,7 @@ environment.plugins.prepend('Provide',
 )
 
 module.exports = environment
+
+
+
+
