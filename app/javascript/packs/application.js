@@ -12,6 +12,7 @@ require("jquery")
 
 import 'bootstrap'
 import '../stylesheets/application'
+require.context('../images', true)
 
 
 window.addEventListener('load', () => {

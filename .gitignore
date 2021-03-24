@@ -18,6 +18,8 @@
 !/storage/.keep
 
 /public/assets
+/public/*.js
+/public/*.js.map
 /public/service-worker.js
 .byebug_history
 
