@@ -1,6 +1,7 @@
 //const { environment } = require('@rails/webpacker') Commented out to favor PWA
-const { config, environment, Environment } = require('@rails/webpacker');
 const { resolve } = require('path');
+const { config, environment, Environment } = require('@rails/webpacker');
+
 const WebpackerPwa = require('webpacker-pwa');
 new WebpackerPwa(config, environment);
 
