@@ -20,5 +20,11 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.10.2"
+  },
+  "resolutions": {
+    "ssri": "8.0.1",
+    "is-svg":"4.2.2"
   }
 }
+
+d 
